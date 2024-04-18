@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background_gradient">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight Entries"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="282dp"
+        android:backgroundTint="#000000"
+        android:onClick="editButtonClicked"
+        android:text="Edit" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnEdit"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-48dp"
+        android:layout_marginEnd="11dp"
+        android:backgroundTint="#000000"
+        android:onClick="deleteButtonClicked"
+        android:text="Delete" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="435dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@android:color/black"
+        android:onClick="navigateBackToMain"
+        android:text="Back" />
+
+    <ListView
+        android:id="@+id/weightEntriesListView"
+        android:layout_width="wrap_content"
+        android:layout_height="592dp"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

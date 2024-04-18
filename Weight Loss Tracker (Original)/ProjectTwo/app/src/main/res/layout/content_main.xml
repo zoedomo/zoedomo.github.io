@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/background_gradient">
+
+    <!-- Welcome Message -->
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the Weight Loss App!"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Button to Access SMS Permission Page -->
+    <Button
+        android:id="@+id/smsPermissionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage SMS Permissions"
+        android:backgroundTint="@android:color/black"
+        android:layout_gravity="center"/>
+
+    <!-- Grid Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Column Headers -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Date"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Weight"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Empty Space for Edit/Delete Buttons -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <!-- Sample Row 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2023-01-01"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="150 lbs"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+        <!-- Edit and Delete Buttons for Row 1 -->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Edit row"
+            android:onClick="editRow"
+            android:src="@android:drawable/ic_menu_edit"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,ImageContrastCheck" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Delete row"
+            android:onClick="deleteRow"
+            android:src="@android:drawable/ic_menu_delete"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,ImageContrastCheck" />
+    </LinearLayout>
+
+    <!-- Sample Row 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2023-01-02"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="155 lbs"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+        <!-- Edit and Delete Buttons for Row 2 -->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Edit row"
+            android:onClick="editRow"
+            android:src="@android:drawable/ic_menu_edit"
+            tools:ignore="HardcodedText,ImageContrastCheck" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Delete row"
+            android:onClick="deleteRow"
+            android:src="@android:drawable/ic_menu_delete"
+            tools:ignore="HardcodedText,ImageContrastCheck" />
+
+    </LinearLayout>
+
+
+    <!-- Button to Add New Data -->
+    <Button
+        android:id="@+id/btnAddNewData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="addNewData"
+        android:backgroundTint="@android:color/black"
+    android:text="Add New Data"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

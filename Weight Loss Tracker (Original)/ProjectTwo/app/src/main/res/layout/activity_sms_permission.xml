@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background_gradient">
+
+    <TextView
+        android:id="@+id/textPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To provide notifications for your weight goals, we need permission to access your SMS messages."
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnGrantPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grant Permission"
+        android:layout_below="@id/textPermission"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/black"
+        android:onClick="requestSmsPermission"
+        tools:ignore="HardcodedText" />
+
+    <!-- Deny Button -->
+    <Button
+        android:id="@+id/btnDenyPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deny"
+        android:layout_below="@id/btnGrantPermission"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="denySmsPermission"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
